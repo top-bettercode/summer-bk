@@ -1,0 +1,134 @@
+{
+  "groups": [
+    {
+      "name": "logging",
+      "type": "top.bettercode.logging.logback.Logback2LoggingSystem"
+    }
+  ],
+  "properties": [
+    {
+      "name": "summer.web.project-name",
+      "type": "java.lang.String",
+      "description": "项目名称.",
+      "sourceType": "top.bettercode.logging.UtilKt"
+    }
+  ],
+  "hints": [
+    {
+      "name": "summer.logging.spilt.keys",
+      "values": [
+        {
+          "value": "root",
+          "description": "Root logger used to assign the default logging level."
+        }
+      ],
+      "providers": [
+        {
+          "name": "logger-name"
+        }
+      ]
+    },
+    {
+      "name": "summer.logging.spilt.values",
+      "values": [
+        {
+          "value": "trace"
+        },
+        {
+          "value": "debug"
+        },
+        {
+          "value": "info"
+        },
+        {
+          "value": "warn"
+        },
+        {
+          "value": "error"
+        },
+        {
+          "value": "fatal"
+        },
+        {
+          "value": "off"
+        }
+      ],
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    },
+    {
+      "name": "summer.logging.spilt-level",
+      "values": [
+        {
+          "value": "trace"
+        },
+        {
+          "value": "debug"
+        },
+        {
+          "value": "info"
+        },
+        {
+          "value": "warn"
+        },
+        {
+          "value": "error"
+        },
+        {
+          "value": "fatal"
+        },
+        {
+          "value": "off"
+        }
+      ],
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    },
+    {
+      "name": "summer.logging.spilt-marker.keys",
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    },
+    {
+      "name": "summer.logging.spilt-marker.values",
+      "values": [
+        {
+          "value": "trace"
+        },
+        {
+          "value": "debug"
+        },
+        {
+          "value": "info"
+        },
+        {
+          "value": "warn"
+        },
+        {
+          "value": "error"
+        },
+        {
+          "value": "fatal"
+        },
+        {
+          "value": "off"
+        }
+      ],
+      "providers": [
+        {
+          "name": "any"
+        }
+      ]
+    }
+  ]
+}
+
