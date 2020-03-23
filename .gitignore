@@ -1,0 +1,31 @@
+# Created by .ignore support plugin (hsz.mobi)
+### wu template
+.gradle
+/build/
+.gradletasknamecache
+
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+target
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out
+classes
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
