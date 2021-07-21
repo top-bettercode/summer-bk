@@ -203,12 +203,12 @@ public class SimpleJpaExtRepository<T, ID> extends
   public void deleteFromRecycleBin(Example<T> example) {
     if (softDeleteSupport.support()) {
       Iterable<T> allFromRecycleBin = findAllFromRecycleBin(example);
-      super.deleteAllInBatch(allFromRecycleBin);
+      super.deleteInBatch(allFromRecycleBin);
     }
   }
 
   @Override
-  public void deleteAllInBatch(Iterable<T> entities) {
+  public void deleteInBatch(Iterable<T> entities) {
     if (softDeleteSupport.support()) {
       Assert.notNull(entities, "The given Iterable of entities not be null!");
       if (!entities.iterator().hasNext()) {
@@ -253,7 +253,7 @@ public class SimpleJpaExtRepository<T, ID> extends
         query.executeUpdate();
       }
     } else {
-      super.deleteAllInBatch(entities);
+      super.deleteInBatch(entities);
     }
   }
 
@@ -291,8 +291,8 @@ public class SimpleJpaExtRepository<T, ID> extends
   }
 
   @Override
-  public T getById(ID id) {
-    T optional = super.getById(id);
+  public T getOne(ID id) {
+    T optional = super.getOne(id);
     if (softDeleteSupport.support()) {
       if (optional != null && softDeleteSupport.isSoftDeleted(optional)) {
         return null;
@@ -302,12 +302,6 @@ public class SimpleJpaExtRepository<T, ID> extends
     } else {
       return optional;
     }
-  }
-
-  @Deprecated
-  @Override
-  public T getOne(ID id) {
-    return getById(id);
   }
 
   @Override

@@ -16,10 +16,12 @@ import java.sql.ResultSetMetaData
  * @author Peter Wu
  */
 fun ResultSet.each(rs: ResultSet.() -> Unit) {
-    use {
+    try {
         while (next()) {
             rs(this)
         }
+    } finally {
+        close()
     }
 }
 

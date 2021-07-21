@@ -64,7 +64,9 @@ allprojects {
             dependency("org.jetbrains.dokka:kotlin-as-java-plugin:$kotlinVersion")
             dependency("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
 
-            dependency("org.springframework.boot:spring-boot-gradle-plugin:2.5.0")
+            dependency("org.springframework.boot:spring-boot-gradle-plugin:2.4.2")
+            dependency("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.4.2")
+
             dependency("io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE")
             dependency("com.oracle.database.jdbc:ojdbc8:21.1.0.0")
             dependency("gradle.plugin.com.github.alexeylisyutenko:windows-service-plugin:1.1.0")
@@ -100,8 +102,6 @@ allprojects {
 
             dependency("org.dhatim:fastexcel:0.12.11")
             dependency("org.dhatim:fastexcel-reader:0.12.11")
-
-            dependency("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.5.0")
 
             dependency("org.mybatis:mybatis:3.5.7")
             dependency("org.mybatis:mybatis-spring:2.0.6")

@@ -227,16 +227,20 @@ open class GeneratorExtension(
     fun <T> use(metaData: DatabaseMetaData.() -> T): T {
         Class.forName(datasource.driverClass).getConstructor().newInstance()
         val databaseMetaData = DatabaseMetaData(datasource, debug)
-        databaseMetaData.use {
-            return metaData(it)
+        try {
+            return metaData(databaseMetaData)
+        } finally {
+            databaseMetaData.close()
         }
     }
 
     fun <T> run(connectionFun: Connection.() -> T): T {
         Class.forName(datasource.driverClass).getConstructor().newInstance()
         val connection = DriverManager.getConnection(datasource.url, datasource.properties)
-        connection.use {
-            return connectionFun(it)
+        try {
+            return connectionFun(connection)
+        } finally {
+            connection.close()
         }
     }
 
