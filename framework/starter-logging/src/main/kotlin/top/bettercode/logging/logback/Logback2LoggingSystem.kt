@@ -97,7 +97,9 @@ open class Logback2LoggingSystem(classLoader: ClassLoader) : LogbackLoggingSyste
             }
         }
         val filesProperties =
-            Binder.get(environment).bind("summer.logging.files", FilesProperties::class.java).get()
+            if (existProperty(environment, "summer.logging.files.path")) Binder.get(environment)
+                .bind("summer.logging.files", FilesProperties::class.java)
+                .get() else FilesProperties()
 
         //slack log
         if (existProperty(environment, "summer.logging.slack.auth-token") && existProperty(
