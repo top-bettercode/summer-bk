@@ -64,8 +64,8 @@ allprojects {
             dependency("org.jetbrains.dokka:kotlin-as-java-plugin:$kotlinVersion")
             dependency("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3")
 
-            dependency("org.springframework.boot:spring-boot-gradle-plugin:2.4.2")
-            dependency("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.4.2")
+            dependency("org.springframework.boot:spring-boot-gradle-plugin:2.3.2.RELEASE")
+            dependency("org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.3.2.RELEASE")
 
             dependency("io.spring.gradle:dependency-management-plugin:1.0.11.RELEASE")
             dependency("com.oracle.database.jdbc:ojdbc8:21.1.0.0")
